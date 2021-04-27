@@ -3,4 +3,6 @@
 Note that this font may not be suitable for low resolution devices and applications.
 It looks better when the size is big especially on desktop screens.
 
-See it on
+[See the font here](https://topraksoyearthmantsuchimoto.github.io/LatinFontDesign/ "And download it for free").
+
+[View the license here](https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/blob/main/LICENSE)
