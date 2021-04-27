@@ -1,0 +1,157 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*With the star selector every div is selected. Divs don't inherit this from body if we set it like body{ box-sizing: border-box; } */
+}
+
+body{
+  line-height: 0px; /*necessary to remove the unwanted space below objects*/
+  text-align: justify; /*Necessary! Flexboxes center the containers and not the text itself.*/ /*Divs seem to inherit this automatically. Must handle if some element doesn't inherit this rule automatically.*/
+  /* Also see css_for_custom_cursor.css */
+}
+
+@font-face {
+  font-family: 'ManheartEarthman';
+  src: url('assets/ManheartEarthman.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   url('assets/ManheartEarthman.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+.radialBackgroundDiv{
+  position: fixed;
+  z-index: 1;
+  left:0px;
+  right:0px;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(circle, white, white, lightgrey);
+}
+
+main{
+  position: fixed;
+  z-index: 2;
+  left:0px;
+  right:0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  font-family: 'ManheartEarthman';
+}
+
+p, h1, a{
+  line-height: normal;
+}
+
+h1{
+  font-size: 5vmin;
+}
+
+p{
+  font-size: 3.6vmin;
+}
+
+a{
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
+  font-size: 2.7vmin;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+.darkModeSwitchContainer{
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%,25%);
+  width: 140px;
+  height: 74px;
+  border: 2px solid rgba(0,0,0,0.25);
+  background-color: rgba(245,245,245,0.5);
+  cursor: pointer;
+}
+
+.emptyArea{
+  width: 140px;
+  min-height: 74px;
+}
+
+.titleContainer{
+  margin-top: 5vmin;
+  margin-bottom: 5vmin;
+}
+
+.loremIpsumContainer{
+  width: 80vmin;
+}
+
+.downloadLinkContainer{
+  margin-top: 8vmin;
+  margin-bottom: 3vmin;
+  background-color: rgba(30,30,30,0.95);
+  border: 2px solid rgba(222, 222, 222, 0.5);
+  height: 70px;
+}
+.patreonLinkContainer{
+  background-color: rgba(30,30,30,0.95);
+  border: 2px solid rgba(222, 222, 222, 0.5);
+  height: 70px;
+}
+
+.roundedBox{
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px rgba(0,0,0,0.25);
+  display: flex;
+  justify-content: center;
+	align-items: center;
+}
+
+.animationInvertColor{
+ animation-name: invertColor;
+ animation-duration: 2s;
+ animation-fill-mode: forwards;
+}
+@keyframes invertColor {
+  0% {filter:invert(0%);}
+  100% {filter:invert(100%);}
+}
+.animationRevertColor{
+ animation-name: revertColor;
+ animation-duration: 2s;
+ animation-fill-mode: forwards;
+}
+@keyframes revertColor {
+  0% {filter:invert(100%);}
+  100% {filter:invert(0%);}
+}
+.animationTextBecomesWhite{
+animation-name: textBecomesWhite;
+animation-duration: 2.2s;
+animation-fill-mode: forwards;
+}
+@keyframes textBecomesWhite {
+  0% {color: rgb(0,0,0);}
+  100% {color: rgb(255,255,255);}
+}
+.animationTextBecomesBlack{
+animation-name: textBecomesBlack;
+animation-duration: 2.2s;
+animation-fill-mode: forwards;
+}
+@keyframes textBecomesBlack {
+  0% {color: rgb(255,255,255);}
+  100% {color: rgb(0,0,0);}
+}

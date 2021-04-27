@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Download Font</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.1, minimum-scale=1.0"> <!-- For mobile device screens to display things properly -->
+    <meta name="description" content="Download Manheart Earthman’s Latin Handwriting Font">
+    <meta name="author" content="Manheart Earthman">
+    <link rel="icon" type="image/png" href="assets/icon.png" id="icon" sizes="32x32">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="darkModeSwitchContainer roundedBox" onclick="switchToggleDarkLight();">
+      <img src="assets/darkmodeonoff.png" alt="" style="width: 100px;">
+    </div>
+    <div class="radialBackgroundDiv" id="idOfTheRadialBackgroundDiv">
+
+    </div>
+    <main id="everythingContainerMain">
+      <div class="emptyArea">
+        &nbsp;
+      </div>
+      <div class="titleContainer" id="idOfTheTitleContainerDiv">
+        <h1>
+          Sample Text
+        </h1>
+      </div>
+      <div class="loremIpsumContainer" id="idOfTheLoremIpsumContainerDiv">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+      <div class="downloadLinkContainer roundedBox">
+        <a href="Manheart_Earthman-font.zip">Download Manheart Earthman’s font</a>
+      </div>
+      <div class="patreonLinkContainer roundedBox">
+        <a href="https://patreon.com/terranationalbonocracy" target="_blank">Support Manheart Earthman’s projects by joining the good people who help him via Patreon</a>
+      </div>
+    </main>
+  </body>
+  <script type="text/javascript">
+    var fullViewportBackground = document.getElementById('idOfTheRadialBackgroundDiv');
+    var loremIpsumTextDiv = document.getElementById('idOfTheLoremIpsumContainerDiv');
+    var titleTextDiv = document.getElementById('idOfTheTitleContainerDiv');
+    var counter = 1;
+    function switchToggleDarkLight() {
+      if (counter%2 == 0) {
+        //console.log("çift");
+        fullViewportBackground.classList.remove("animationInvertColor");
+        fullViewportBackground.classList.add("animationRevertColor");
+        loremIpsumTextDiv.classList.remove("animationTextBecomesWhite");
+        loremIpsumTextDiv.classList.add("animationTextBecomesBlack");
+        titleTextDiv.classList.remove("animationTextBecomesWhite");
+        titleTextDiv.classList.add("animationTextBecomesBlack");
+      }
+      else{
+        //console.log("tek");
+        fullViewportBackground.classList.remove("animationRevertColor");
+        fullViewportBackground.classList.add("animationInvertColor");
+        loremIpsumTextDiv.classList.remove("animationTextBecomesBlack");
+        loremIpsumTextDiv.classList.add("animationTextBecomesWhite");
+        titleTextDiv.classList.remove("animationTextBecomesBlack");
+        titleTextDiv.classList.add("animationTextBecomesWhite");
+      }
+      //
+      counter++;
+    }
+  </script>
+</html>
