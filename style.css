@@ -53,6 +53,11 @@ p{
   font-size: 3.6vmin;
 }
 
+h6{
+  font-size: 2.5vmin;
+  font-weight: normal;
+}
+
 a{
   margin-left: 15px;
   margin-right: 15px;
