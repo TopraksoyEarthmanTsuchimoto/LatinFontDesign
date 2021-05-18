@@ -56,6 +56,7 @@ p{
 h6{
   font-size: 2.5vmin;
   font-weight: normal;
+  padding-top: 1vmin;
 }
 
 a{
@@ -103,16 +104,16 @@ a:hover, a:active {
 }
 
 .downloadLinkContainer{
-  margin-top: 8vmin;
+  margin-top: 4vmin;
   margin-bottom: 3vmin;
   background-color: rgba(30,30,30,0.95);
   border: 2px solid rgba(222, 222, 222, 0.5);
-  height: 70px;
+  height: 62px;
 }
 .patreonLinkContainer{
   background-color: rgba(30,30,30,0.95);
   border: 2px solid rgba(222, 222, 222, 0.5);
-  height: 70px;
+  height: 62px;
 }
 
 .roundedBox{
