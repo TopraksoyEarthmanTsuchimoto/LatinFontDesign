@@ -41,7 +41,7 @@ main{
   font-family: 'ManheartEarthman';
 }
 
-p, h1, a{
+p, h1, h6, a{
   line-height: normal;
 }
 
