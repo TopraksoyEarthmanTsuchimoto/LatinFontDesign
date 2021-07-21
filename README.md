@@ -1,8 +1,7 @@
 # Manheart Earthman's calligraphic handwriting font
 
 This font is designed for high resolution displays and may not be suitable for low resolution applications or small screen devices.
-
-It looks better when set to bigger sizes, especially on desktop screens.
+Note: The font looks especially pretty when printed on paper.
 
 **IMPORTANT**: You must use this font with a program that supports kerning! Kerning is the fine adjustment of spacing between certain pairs of letters/characters.
 
