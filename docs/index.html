@@ -84,11 +84,23 @@
         top:80vh;
         display: flex; align-items: center; justify-content: center;
       }
-      button{
+      a{
         margin: 5px;
         padding-top: 4px; padding-bottom: 4px; padding-left: 7px; padding-right: 7px;
         font-family: monospace; white-space:nowrap;
         cursor: pointer;
+        background-color: #477d4b;
+        border: 2px solid #509156;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        transform: scale(1);
+        transition: all .3s;
+      }
+      a:hover{
+        transform: scale(1.05);
+        background-color: #51a85e;
+        border: 2px solid #5bb960;
       }
       footer{
         position: fixed; left:50%; transform: translateX(-50%);
@@ -126,16 +138,16 @@
       </p>
     </article>
     <nav>
-      <a href="ManheartEarthman.otf" download="ManheartEarthman.otf"><button>Click here to get the font</button></a>
-      <button onclick="showDonationOptions();">Click here to see donation options</button>
+      <a href="ManheartEarthman.otf" download="ManheartEarthman.otf">Click here to get the font</a>
+      <a href="https://patreon.com/ForTerranationalBonocracy_USD" target="_blank">Click here to see donation options</a>
     </nav>
     <footer>
       You may download and use Manheart Earthman’s handwriting font without making a donation.<br>But if you find it useful and if you actually think that it’s beautiful then why not go ahead and make a donation?
     </footer>
     <script>
-      function showDonationOptions() {
-        window.open("https://patreon.com/ForTerranationalBonocracy_USD","_blank");
-      }
+      // function showDonationOptions() {
+      //   window.open("https://patreon.com/ForTerranationalBonocracy_USD","_blank");
+      // }
     </script>
   </body>
 </html>
