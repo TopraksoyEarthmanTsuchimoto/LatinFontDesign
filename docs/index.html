@@ -11,8 +11,8 @@
         src: url(Topraksoy.otf);
       }*/
       body{
-        background-color: #22272e;
-        color: #adbac7;
+        background-color: #242930;
+        color: #b1bdc9;
         text-align: center;
       }
       *{
@@ -23,7 +23,7 @@
       header{
         position: fixed;
         left:50%; transform: translateX(-50%);
-        top:3vh;
+        top:2vh;
         height: 12vh;
         display: flex; align-items: center; justify-content: center;
       }
@@ -35,40 +35,104 @@
         overflow: hidden;
       }
       div{
-        display: flex; align-items: center; justify-content: center;
+        display: flex; align-items: center; justify-content: center; flex-direction: column;
       }
       .printLooksLikeThis{
         width:100vw;
-        height: 55px;
+        height: 21.46vh;
         background-color: rgba(99, 99, 99, 0.5);
+        box-shadow: 0px 0px 1px #242930 inset, 0px 0px 2px #242930 inset, 0px 0px 3px #242930 inset, 0px 0px 4px #242930 inset;
       }
       .screenLooksLikeThis{
         width:100vw;
-        height: 125px;
-        margin-top: 3vh;
-        background-color: white;
+        height: 21.46vh;
+        margin-top: 2vh;
+        background-color: #edf0f5;
+        box-shadow: 0px 0px 1px #242930 inset, 0px 0px 2px #242930 inset, 0px 0px 3px #242930 inset, 0px 0px 4px #242930 inset;
+        overflow: hidden;
+        background-image: url(lorem_ipsum_bg_3840x260.webp);
+        background-size: cover;
+      }
+      .screen_680x130{
+        position: relative; /*left:50%; top:50%; transform: translate(-50%,-50%);*/
+        height:13.77vh;
+        z-index:2;
+      }
+      article{
+        position: fixed; left:50%; transform: translateX(-50%);
+        top:63vh;
+        width:62vw;
+        text-align: justify; text-align-last: left;
+        overflow: auto; max-height: 90px;
+        font-family: monospace;
+        font-size: 10px;
+        line-height: 16px;
+        padding: 7px;
+        background-color: #202429;
+        border-radius: 8px;
+        border: 1px solid #16191c;
+      }
+      span{
+        background-color: #39404a;
+        border: 2px solid #48505c;
+        border-radius: 3px;
+      }
+      nav{
+        position: fixed; left:50%; transform: translateX(-50%);
+        top:80vh;
+        display: flex; align-items: center; justify-content: center;
+      }
+      button{
+        margin: 5px;
+        padding-top: 4px; padding-bottom: 4px; padding-left: 7px; padding-right: 7px;
+        font-family: monospace; white-space:nowrap;
+      }
+      footer{
+        position: fixed; left:50%; transform: translateX(-50%);
+        bottom:0vh;
+        padding: 2vmin;
+        max-height: 13vh;
+        overflow: auto;
+        width: 100vw;
+        background-color: #333941;
+        font-family: "Segoe UI",sans-serif;
       }
     </style>
   </head>
   <body>
     <header>
       <div>
-        ABCÇDEFGĞHIİJKLMNOÖPQRSŞTUÜVWYXZ<br>abcçdefgğhıijklmnoöpqrsştuüvwyxz
+        ABCÇDEFGĞHIİJKLMNOÖPQRSŞTUÜVWYXZ<br>abcçdefgğhıijklmnoöpqrsştuüvwyxz<br>0123456789
       </div>
     </header>
     <main>
       <div class="printLooksLikeThis">
-
+        <img style="height:13.77vh;" src="" alt="This is what the font looks like when printed on paper">
       </div>
       <div class="screenLooksLikeThis">
-        <img style="height:125px;" src="screen_1350x250.webp" alt="And this is how it looks on the screen">
+        <img class="screen_680x130" src="screen_680x130.webp" alt="And this is how it looks on the screen">
       </div>
     </main>
+    <article>
+      <p>
+      What you CAN do with ﻿“Manheart Earthman” font: <span>&nbsp;Download and use it for any purpose and in any context on condition that you respect and stay ready to help all the good people of chastity and charity on Earth.&nbsp;</span>
+      </p>
+      <p style="line-height: 8px;"> &nbsp; </p>
+      <p>
+      What you can NOT do with “Manheart Earthman” font: <span>&nbsp;Change it. That means you are not allowed to modifiy any part of it.&nbsp;</span>
+      </p>
+    </article>
     <nav>
-
+      <button>Click here to get the font</button>
+      <button onclick="showDonationOptions();">Click here to see donation options</button>
     </nav>
     <footer>
-
+      You may download and use Manheart Earthman’s handwriting font without making a donation.<br>But if you find it useful and if you actually think that it’s beautiful then why not go ahead and make a donation?
     </footer>
+    <script>
+      function showDonationOptions() {
+        window.open("https://patreon.com/ForTerranationalBonocracy_USD","_blank");
+      }
+    </script>
   </body>
 </html>
