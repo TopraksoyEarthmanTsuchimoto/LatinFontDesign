@@ -8,7 +8,7 @@
     <style>
       @font-face {
         font-family: myFont;
-        src: url("ManheartEarthman.otf");
+        src: url("https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/raw/main/ManheartEarthman.otf");
       }
       body{
         background-color: #242930;
@@ -125,7 +125,7 @@
       </p>
     </article>
     <nav>
-      <button onclick="downloadFontFile();">Click here to get the font</button>
+      <button onclick=""><a>Click here to get the font</a></button>
       <button onclick="showDonationOptions();">Click here to see donation options</button>
     </nav>
     <footer>
@@ -137,7 +137,7 @@
       }
       function downloadFontFile() {
         const a = document.createElement('a');
-        a.href = "ManheartEarthman.otf";
+        a.href = "https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/raw/main/ManheartEarthman.otf";
         a.download = "ManheartEarthman.otf";
         document.body.appendChild(a);
         a.click();
