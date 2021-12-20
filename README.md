@@ -4,7 +4,7 @@
 **Note 1**: This font is designed for high resolution displays and may not be suitable for low resolution applications and/or devices with small screens.
 **Note 2**: You must use this font in a program that supports **kerning**! Like Open Office Writer or Microsoft Word etc.
 
-#### To learn who may and who may not to use the font and how, [view this VERY SHORT AND READABLE license](https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/blob/main/LICENSE)
+#### To learn who may and who may not use the font and how, [view this VERY SHORT AND READABLE license](https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/blob/main/LICENSE)
 
 If you really like and seriously use this font then please check [ForTerranationalBonocracy on PATREON](https://patreon.com/ForTerranationalBonocracy_USD)
 ___
