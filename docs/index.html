@@ -8,7 +8,7 @@
     <style>
       @font-face {
         font-family: myFont;
-        src: url("https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/raw/main/ManheartEarthman.otf");
+        src: url("ManheartEarthman.otf");
       }
       body{
         background-color: #242930;
@@ -125,7 +125,7 @@
       </p>
     </article>
     <nav>
-      <button onclick=""><a>Click here to get the font</a></button>
+      <a href="https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/raw/main/ManheartEarthman.otf" download="ManheartEarthman.otf"><button>Click here to get the font</button></a>
       <button onclick="showDonationOptions();">Click here to see donation options</button>
     </nav>
     <footer>
@@ -135,14 +135,14 @@
       function showDonationOptions() {
         window.open("https://patreon.com/ForTerranationalBonocracy_USD","_blank");
       }
-      function downloadFontFile() {
-        const a = document.createElement('a');
-        a.href = "https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/raw/main/ManheartEarthman.otf";
-        a.download = "ManheartEarthman.otf";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      }
+      // function downloadFontFile() {
+      //   const a = document.createElement('a');
+      //   a.href = "https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/raw/main/ManheartEarthman.otf";
+      //   a.download = "ManheartEarthman.otf";
+      //   document.body.appendChild(a);
+      //   a.click();
+      //   document.body.removeChild(a);
+      // }
     </script>
   </body>
 </html>
