@@ -1,4 +1,4 @@
-# Manheart Earthman's calligraphic handwriting font
+﻿# Manheart Earthman's calligraphic handwriting font
 [See the font here](https://topraksoyearthmantsuchimoto.github.io/LatinFontDesign/ "And download it for free")
 
 **Note 1**: This font is designed for high resolution displays and may not be suitable for low resolution applications and/or devices with small screens.
