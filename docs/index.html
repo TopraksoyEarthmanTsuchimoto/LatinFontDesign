@@ -45,8 +45,13 @@
         width:100vw;
         height: 20vh;
         background-color: #0d0f11;
-        box-shadow: 0px 0px 1px #242930 inset, 0px 0px 2px #242930 inset, 0px 0px 3px #242930 inset, 0px 0px 4px #242930 inset;
+        /*box-shadow: 0px 0px 1px #242930 inset, 0px 0px 2px #242930 inset, 0px 0px 3px #242930 inset, 0px 0px 4px #242930 inset;*/
         overflow: hidden;
+      }
+      .shadow{
+        width: 100vw; height: 20vh; position: absolute;
+        box-shadow: 0px 0px 1px #242930 inset, 0px 0px 2px #242930 inset, 0px 0px 3px #242930 inset, 0px 0px 4px #242930 inset;
+        z-index: 3;
       }
       .screenLooksLikeThis{
         width:100vw;
@@ -135,6 +140,7 @@
     <main>
       <div class="printLooksLikeThis">
         <img style="width:100vw;" src="printed.webp" alt="This is what the font looks like when printed on paper">
+        <div class="shadow"></div>
       </div>
       <div class="screenLooksLikeThis">
         <img class="screen_680x130" src="screen_680x130.webp" alt="And this is how it looks on the screen">
