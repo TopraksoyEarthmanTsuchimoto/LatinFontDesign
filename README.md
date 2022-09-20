@@ -7,4 +7,4 @@
 
 If you really like and seriously use this font then please check [ForTerranationalBonocracy on PATREON](https://patreon.com/ForTerranationalBonocracy_USD)
 ___
-###### Note that "Manheart Earthman [EN]" is also known as “B. A. Bilgekılınç Topraksoy [TR]” “土本　智一勇夫剛志 [JA]” “محمد حكيم البر الترابي [AR]” “土　勇剛智 [ZH]”.
+###### Note that "Manheart Earthman [EN]" is also known as “B. A. Bilgekılınç Topraksoy [TR]” “<ruby>土本<rt>つちもと</rt></ruby>　<ruby>智一勇夫剛志<rt>さといちいさおつよし</rt></ruby>” “土　勇剛智” “محمد البر الترابي”.
