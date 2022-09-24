@@ -1,166 +1,219 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="icon.png" id="icon" sizes="32x32">
-    <title>Get Manheart Earthman’s handwriting font</title>
-    <meta name="author" content="Manheart Earthman">
-    <style>
-      @font-face {
-        font-family: myFont;
-        src: url("ManheartEarthman.otf");
-      }
-      body{
-        background-color: #0d0f11;
-        color: #b1bdc9;
-        text-align: center;
-      }
-      *{
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-      }
-      header{
-        position: fixed;
-        left:50%; transform: translateX(-50%);
-        top:2vh;
-        height: 12vh;
-        display: flex; align-items: center; justify-content: center;
-        font-family: myFont;
-        letter-spacing: 2px;
-      }
-      main{
-        position: fixed;
-        left:50%; transform: translateX(-50%);
-        top:15vh;
-        width:100vw;
-        overflow: hidden;
-      }
 
-      div{
-        display: flex; align-items: center; justify-content: center; flex-direction: column;
-      }
-      .printLooksLikeThis{
-        width:100vw;
-        height: 20vh;
-        background-color: #0d0f11;
-        /*box-shadow: 0px 0px 1px #242930 inset, 0px 0px 2px #242930 inset, 0px 0px 3px #242930 inset, 0px 0px 4px #242930 inset;*/
-        overflow: hidden;
-      }
-      .shadow{
-        width: 100vw; height: 20vh; position: absolute;
-        box-shadow: 0px 0px 1px #242930 inset, 0px 0px 2px #242930 inset, 0px 0px 3px #242930 inset, 0px 0px 4px #242930 inset;
-        z-index: 3;
-      }
-      .screenLooksLikeThis{
-        width:100vw;
-        height: 20vh;
-        margin-top: 2vh;
-        background-color: #edf0f5;
-        box-shadow: 0px 0px 1px #242930 inset, 0px 0px 2px #242930 inset, 0px 0px 3px #242930 inset, 0px 0px 4px #242930 inset;
-        overflow: hidden;
-        background-image: url(lorem_ipsum_bg_3840x260.webp);
-        background-size: cover;
-      }
-      .screen_680x130{
-        position: relative; /*left:50%; top:50%; transform: translate(-50%,-50%);*/
-        height:13.77vh;
-        z-index:2;
-      }
-      article{
-        position: fixed; left:50%; transform: translateX(-50%);
-        top:59vh;
-        width:80vw;
-        text-align: justify; text-align-last: left;
-        overflow: auto; max-height: 90px;
-        font-family: monospace;
-        font-size: 10px;
-        line-height: 16px;
-        padding: 7px;
-        background-color: #202429;
-        border-radius: 8px;
-        border: 1px solid #16191c;
-      }
-      span{
-        background-color: #39404a;
-        border: 2px solid #48505c;
-        border-radius: 3px;
-      }
-      nav{
-        position: fixed; left:50%; transform: translateX(-50%);
-        top:73vh;
-        display: flex; align-items: center; justify-content: center;
-      }
-      a{
-        margin: 5px;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable = no"> <!-- For mobile device screens to display things properly. As of 2022 Safari ignores this. -->
+    <title>Manheart Earthman's Handwritten Font</title>
+    <meta name="description" content="In his handwritten calligraphic font, Manheart Earthman attempts to unite the Eastern and the Western sense of aesthetics while staying on the sweet spot between elegance and minimalism.">
+    <meta name="author" content="Manheart Earthman">
+    <link rel="icon" type="image/png" href="icon.png" id="icon" sizes="32x32">
+
+    <style media="screen">
+    *, *::before, *::after{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      line-height: 0px;
+      text-align: center; /*Necessary! Flexboxes center the containers and not the text itself.*/ /*Divs seem to inherit this automatically. Must handle if some element doesn't inherit this rule automatically.*/
+      touch-action: none;
+    }
+    p{line-height: normal; font-family: "SF Pro","Helvetica","Roboto","Segoe UI Light","Segoe UI",sans-serif; font-size: 1.7vmin; color: white; margin-top: 1vmin;}
+
+    main{
+      position: fixed;
+      top:0; left:0; width:100vw; height: 100vh; /*In the parent, the "left" value is to be changed via script to hide this div. See js_reusables/js_for_app_initialization_in_parent.js*/
+      overflow: auto;
+      background-image: linear-gradient(#a7bac8,#d3dde6);
+      display: flex; align-items: center; flex-direction: column;
+    }
+    img{
+      position: relative;
+      transition: margin-left 1.15s;
+    }
+    nav{
+      width:2.1vmin; height:2.1vmin; border:0.5vmin solid rgba(255,255,255,0.6); border-radius:50%;
+      transition: transform 0.15s;
+    }
+    nav:hover{ background-color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,1); cursor: pointer; transform: scale(1.1);}
+    nav:active{background-color: rgba(255,255,255,1); transform: scale(0.5);}
+    .navToggle{background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.8);}
+
+    .buttons div:hover{cursor: pointer;}
+    .flexCenter{display: flex; justify-content: center; align-items: center;}
+    @font-face {
+      font-family: ManheartEarthman;
+      src: url(ManheartEarthman.otf);
+    }
+    textarea{ line-height: normal; font-family: "ManheartEarthman"; font-size: 3.5vmin; }
+    textarea:focus{outline-style: none;}
+    input:focus{outline-style: none;} input:hover{cursor: pointer;}
+
+    a{
+        margin: 1vmin;
         padding-top: 4px; padding-bottom: 4px; padding-left: 7px; padding-right: 7px;
         font-family: monospace; white-space:nowrap;
         cursor: pointer;
-        background-color: #477d4b;
-        border: 2px solid #509156;
+        background-color: #5e7791;
+        border: 2px solid #6d869c;
         border-radius: 5px;
         text-decoration: none;
         color: white;
         transform: scale(1);
-        transition: all .3s;
-      }
-      a:hover{
+        transition: background-color .3s, border .3s, transform .15s;
+        line-height: normal;
+    }
+    a:hover{
         transform: scale(1.05);
         background-color: #51a85e;
         border: 2px solid #5bb960;
-      }
-      footer{
-        position: fixed; left:50%; transform: translateX(-50%);
-        bottom:0vh;
-        padding: 2vmin;
-        max-height: 13vh;
-        overflow: auto;
-        width: 100vw;
-        background-color: #333941;
-        font-family: "Segoe UI",sans-serif;
-      }
-    </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NT1D6RKR59"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    }
+    a:active{
+      transform: scale(0.75);
+    }
 
-      gtag('config', 'G-NT1D6RKR59');
-    </script>
+    dialog{ position: fixed; z-index: 12000; left:50%;top:50%;transform:translate(-50%,-50%);
+      background-image: linear-gradient(#a6bac8,#d2dde6); border-radius:8px; border: 0px; padding: 20px 23px 30px 23px;
+      font-family: "SF Pro","Helvetica","Roboto","Segoe UI Light","Segoe UI",sans-serif; font-size:1.2rem; color:white; text-align:center;}
+    dialog div {background-color: rgba(88,103,121,0.5); padding: 5px; border-radius: 8px; cursor: pointer; min-width:90%; display: inline-block;}
+    dialog div:hover{background-color: rgba(66,80,94,0.75);}
+    dialog::backdrop{background-image: linear-gradient(rgba(25,42,60,0.8),rgba(60,80,103,0.8));}
+    @media (orientation: landscape) { dialog{min-width: 38ch; max-width: 45ch;} }
+    @media (orientation: portrait) { dialog{min-width: 80vmin; max-width: 90vmin;} }
+    </style>
+
   </head>
   <body>
-    <header>
-      <div>
-        ABCÇDEFGĞHIİJKLMNOÖPQRSŞTUÜVWYXZ<br>abcçdefgğhıijklmnoöpqrsştuüvwyxz<br>0123456789
-      </div>
-    </header>
     <main>
-      <div class="printLooksLikeThis">
-        <img style="width:100vw;" src="printed.webp" alt="This is what the font looks like when printed on paper">
-        <div class="shadow"></div>
+      <div style="width:92.4vmin; height:69.4vmin; border:1.2vmin solid white; background-color:white; border-radius:1vmin; display: flex; justify-content: center; align-items: center; flex-direction: column; margin:2.6vmin;">
+        <div style="width:90vmin; height:60vmin; background-color:transparent; border-radius:1vmin;">
+          <div class="imagesContainer" style="width:90vmin; height:60vmin; overflow: hidden; display: flex; border-radius:0.75vmin;">
+            <img src="0.webp" style="width:100%;" draggable="false">
+            <img src="1.webp" style="width:100%;" draggable="false">
+            <img src="2.webp" style="width:100%;" draggable="false">
+            <img src="3.webp" style="width:100%;" draggable="false">
+          </div>
+          <div class="circlesContainer" style="position:relative; top:-2.7vmin; left:50%; transform: translateX(-50%); display: flex; gap:1vmin; justify-content: center; align-items: center;">
+            <nav></nav>
+            <nav></nav>
+            <nav></nav>
+            <nav></nav>
+          </div>
+        </div>
+        <div class="buttons" style="width:90vmin; height:7vmin; background-color:transparent; display: flex; justify-content: space-evenly; align-items: center;">
+          <div id="previous" style="background-color:white; width:25%; height:6vmin; margin-top:1vmin;" class="flexCenter">
+            <img src="previous.webp" style="height:30px;">
+          </div>
+          <div id="playPause" style="background-color:white; width:25%; height:6vmin; margin-top:1vmin;" class="flexCenter">
+            <img src="pause.webp"style="height:30px;">
+            <img src="play.webp" style="height:30px; display:none;">
+          </div>
+          <div id="next" style="background-color:white; width:25%; height:6vmin; margin-top:1vmin;" class="flexCenter">
+            <img src="next.webp" style="height:30px;">
+          </div>
+        </div>
       </div>
-      <div class="screenLooksLikeThis">
-        <img class="screen_680x130" src="screen_680x130.webp" alt="And this is how it looks on the screen">
-      </div>
+
+      <textarea type="text" name="" style="width: 92.4vmin; height: 13vmin; border-style: none; border-radius:1vmin; padding:1vmin; white-space:pre-wrap;">Type something here</textarea>
+      <p>Adjust font size</p>
+      <input type="range" min="10" max="60" value="35">
+
+      <a href="ManheartEarthmanFont.zip" download onclick="setTimeout(function () { document.getElementsByTagName('dialog')[0].showModal(); }, 1250);">Download the font</a>
     </main>
-    <article>
-      <p>
-      What you CAN do with ﻿“Manheart Earthman” font: <span>&nbsp;Download and use it for any harmless purpose or in any benign context on condition that you respect and stay ready to help all the good people of chastity and charity on Earth.&nbsp;</span>
-      </p>
-      <p style="line-height: 8px;"> &nbsp; </p>
-      <p>
-      What you can NOT do with “Manheart Earthman” font: <span>&nbsp;Change it (that means you are not allowed to modify any part of it).&nbsp;</span>
-      </p>
-    </article>
-    <nav>
-      <a href="ManheartEarthman.otf" download="ManheartEarthman.otf">Click here to get the font</a>
-      <a href="https://patreon.com/ForTerranationalBonocracy_USD" target="_blank">Click here to see donation options</a>
-    </nav>
-    <footer>
-      Manheart Earthman’s handwriting font is a favorware. You may download and use it without making a donation.<br>If you find it useful then the favor we ask in return is that you support all of Manheart Earthman's projects.
-    </footer>
+
+    <dialog data-nosnippet style=" line-height:3.0ch; white-space: normal;">
+      <span style="white-space:nowrap;">Thank you for downloading</span> <span style="white-space:nowrap;">Manheart Earthman's font</span>
+      <p style="line-height:1ch;">&nbsp;</p>
+      <div style="outline:none; padding:0.6ch 1.3ch 0.6ch 1.3ch;" onclick="window.open('https://youtu.be/qAvYgpSg0mk', '_blank');">Watch video about the making of the font</div>
+      <p style="line-height:2ch;">&nbsp;</p>
+      <span style="white-space:nowrap;">Some other products</span> <span style="white-space:nowrap;">by Manheart Earthman</span>
+      <p style="line-height:1ch;">&nbsp;</p>
+      <div style="outline:none; padding:0.6ch 1.3ch 0.6ch 1.3ch;" onclick="window.open('https://speakworldlanguages.app', '_blank');">Open https://speakworldlanguages.app</div>
+      <p style="line-height:1ch;">&nbsp;</p>
+      <div style="outline:none; padding:0.6ch 1.3ch 0.6ch 1.3ch;" onclick="window.open('https://www.youtube.com/channel/UCcEmZy_ztTtoraN1KJJ0Auw', '_blank');">Listen to Manheart Earthman's music</div>
+    </dialog>
+
+    <script>
+      const text = document.getElementsByTagName('textarea')[0];
+      text.addEventListener("focus",function () {
+        text.innerHTML = "";
+      },{once:true});
+      const size = document.getElementsByTagName('input')[0];
+      size.oninput = function() {
+        text.style.fontSize = String(size.value/10)+"vmin";
+      }
+
+      const firstImg = document.querySelector('.imagesContainer').children[0];
+      document.getElementsByTagName('nav')[0].classList.toggle("navToggle");
+      let i = 0; let isPlaying = true;
+      let to = setTimeout(function () { slideToTheNext(); }, 4500); // Set off
+      function slideToTheNext(event) {
+        if (event) { clearTimeout(to); }
+        i++;
+        if (i==4) { i=0; } // Go to 0 instead of 4
+        firstImg.style.marginLeft = String(-90*i)+"vmin";
+        updateCircles();
+        if (isPlaying) {
+          to = setTimeout(function () { slideToTheNext(); }, 4400); // Proceed
+        }
+      }
+      function updateCircles() {
+        document.getElementsByTagName('nav')[0].classList.remove("navToggle");
+        document.getElementsByTagName('nav')[1].classList.remove("navToggle");
+        document.getElementsByTagName('nav')[2].classList.remove("navToggle");
+        document.getElementsByTagName('nav')[3].classList.remove("navToggle");
+        document.getElementsByTagName('nav')[i].classList.add("navToggle");
+      }
+      const playPauseBtnDIV = document.getElementById('playPause');
+      playPauseBtnDIV.addEventListener("click",playPauseF);
+      function playPauseF() {
+        if (isPlaying) {
+          clearTimeout(to);
+          isPlaying = false;
+          playPauseBtnDIV.children[1].style.display = "block"; playPauseBtnDIV.children[0].style.display = "none";
+        } else {
+          isPlaying = true;
+          to = setTimeout(function () { slideToTheNext(); }, 250); // Restart
+          playPauseBtnDIV.children[0].style.display = "block"; playPauseBtnDIV.children[1].style.display = "none";
+        }
+      }
+      document.getElementById('next').addEventListener("click",slideToTheNext);
+      document.getElementById('previous').addEventListener("click",slideToThePrevious);
+      function slideToThePrevious(event) {
+        if (event) { clearTimeout(to); }
+        i--;
+        if (i==-1) { i=3; } // Go to 3 instead of -1
+        firstImg.style.marginLeft = String(-90*i)+"vmin";
+        updateCircles();
+        if (isPlaying) {
+          to = setTimeout(function () { slideToTheNext(); }, 4400); // Proceed
+        }
+      }
+      function addListeners() {
+        document.getElementsByTagName('nav')[0].addEventListener("click",slideToZero);
+        document.getElementsByTagName('nav')[1].addEventListener("click",slideToOne);
+        document.getElementsByTagName('nav')[2].addEventListener("click",slideToTwo);
+        document.getElementsByTagName('nav')[3].addEventListener("click",slideToThree);
+      }
+      addListeners();
+      function removeListeners() {
+        document.getElementsByTagName('nav')[0].removeEventListener("click",slideToZero);
+        document.getElementsByTagName('nav')[1].removeEventListener("click",slideToOne);
+        document.getElementsByTagName('nav')[2].removeEventListener("click",slideToTwo);
+        document.getElementsByTagName('nav')[3].removeEventListener("click",slideToThree);
+      }
+      function proceed() {
+        removeListeners(); setTimeout(function () { addListeners(); }, 1300);
+        clearTimeout(to);  firstImg.style.marginLeft = String(-90*i)+"vmin";        updateCircles();
+        if (isPlaying) { to = setTimeout(function () { slideToTheNext(); }, 4400); }
+      }
+      function slideToZero() {        i = 0; proceed();      }
+      function slideToOne() {         i = 1; proceed();      }
+      function slideToTwo() {         i = 2; proceed();      }
+      function slideToThree() {       i = 3; proceed();      }
+    </script>
   </body>
 </html>
