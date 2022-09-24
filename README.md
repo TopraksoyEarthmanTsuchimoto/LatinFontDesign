@@ -1,15 +1,14 @@
 ﻿# Manheart Earthman's calligraphic handwriting font
+
 [See the font here](https://topraksoyearthmantsuchimoto.github.io/LatinFontDesign/ "And download it for free")
+
 [Download the font](https://topraksoyearthmantsuchimoto.github.io/LatinFontDesign/docs/ManheartEarthmanFont.zip)
+
 **Note 1**: This font is designed for print media and high resolution displays. It may or may not work well with low resolution applications and/or devices with small screens.  
 **Note 2**: You must use this font in a program that supports **kerning**! Like Open Office Writer or Microsoft Word etc *(do not use it in Notepad or WordPad)*.
+
 ***
-<iframe    width="480"    height="480"
-    src="https://www.youtube.com/embed/qAvYgpSg0mk"
-    frameborder="0"
-    allow="encrypted-media"
-    allowfullscreen>
-</iframe>
+Watch video about the making of the font: https://youtu.be/qAvYgpSg0mk
 ***
 #### To learn who may and who may not use the font and how, [you must view this VERY SHORT AND READABLE license](https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/blob/main/LICENSE)
 
