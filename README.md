@@ -8,7 +8,7 @@
 **Note 2**: You must use this font in a program that supports **kerning**! Like Open Office Writer or Microsoft Word etc *(i.e. better if you avoid using it in Notepad or WordPad)*.
 
 ***
-Watch video about the making of the font: https://youtu.be/qAvYgpSg0mk
+Watch video about the making of the font: https://youtu.be/3iDjgNJiX9A
 ***
 #### To learn who may and who may not use the font and how, [you must view this VERY SHORT AND READABLE license](https://github.com/TopraksoyEarthmanTsuchimoto/LatinFontDesign/blob/main/LICENSE)
 
