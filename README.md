@@ -17,5 +17,4 @@ ___
 ###### Note that "Manheart Earthman" is also known as  
 ###### “B. A. Bilgekılınç Topraksoy”  
 ###### “<ruby>土本<rt>つちもと</rt></ruby>　<ruby>智一勇夫剛志<rt>さといちいさおつよし</rt></ruby>”  
-###### “土　勇剛”  
-###### “محمد البر الترابي”.
+###### “محمد سهيل البر الترابي”.
